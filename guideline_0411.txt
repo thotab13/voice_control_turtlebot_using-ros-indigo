@@ -1,0 +1,19 @@
+STEP ONE
+install pocketsphinx
+sudo apt-get install ros-indigo-pocketsphinx
+
+STEP TWO
+install dependecies
+sudo apt-get install gstreamer0.10-pocketsphinx
+sudo apt-get install python-gst0.10
+sudo apt-get install gstreamer0.10-gconf
+
+STEP THREE
+http://jokla.me/robotics/speech-recognition-ros/
+run launch file
+check rostopic list (/recognizer/output ?)
+check rosservice list (/recognizer/start & stop ?)
+check output by speaking and "rostopic echo /recognizer/output"
+
+
+

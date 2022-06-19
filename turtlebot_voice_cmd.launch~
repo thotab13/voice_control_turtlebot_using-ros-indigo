@@ -1,0 +1,12 @@
+<launch>
+
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+  
+  <node name="recognizer" pkg="ZhouN" type="recognizer.py">
+    <param name="lm" value="$(find ZhouN)/script/voice_cmd.lm"/>
+    <param name="dict" value="$(find ZhouN)/script/voice_cmd.dic"/>
+  </node>
+
+  <node name="voice_cmd_vel" pkg="ZhouN" type="voice_cmd_vel.py" output="screen"/>
+
+</launch>
